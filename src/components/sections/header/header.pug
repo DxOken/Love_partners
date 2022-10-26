@@ -1,0 +1,14 @@
+include /components/elements/button/button
+
+mixin section-header
+    .header
+        .header__menu
+            .header__logo
+                img(src='assets/img/svg/logo.svg')
+            .header__btns
+                .header__sign-in
+                    +button('text', 'Вход')
+                .header__sign-up
+                    +button('border', 'Регистрация')
+                .header__lang
+                    +button('text', 'Ru')

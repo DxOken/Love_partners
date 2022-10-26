@@ -1,0 +1,24 @@
+//- Layout
+extends /layout/main/main
+
+include /components/sections/main/main
+include /components/sections/features/features
+include /components/sections/payments/payments
+include /components/sections/support/support
+include /components/sections/admin/admin
+
+
+block head
+    title= 'LovePartners'
+
+block content
+    +section-main
+
+    +section-features
+
+    +section-payments
+
+    +section-support
+
+    +section-admin
+

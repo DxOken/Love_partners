@@ -1,0 +1,27 @@
+@import "~Components/elements/button/button.scss";
+
+.header {
+	position: absolute;
+	width: 100%;
+	z-index: 101;
+
+	&__menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 25px 115px 0;
+
+	}
+
+	&__sign-in {
+		margin-right: 30px;
+	}
+
+	&__sign-up {
+		margin-right: 30px;
+	}
+
+	&__btns {
+		display: flex;
+	}
+}

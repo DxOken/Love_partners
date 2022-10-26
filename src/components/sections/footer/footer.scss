@@ -1,0 +1,71 @@
+.footer {
+	height: 270px;
+	background: #2D036A;
+
+	&__content {
+		margin: 0 115px;
+		padding-top: 90px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__company {
+		&-privacy {
+			margin-top: 15px;
+			font-weight: 400;
+			font-size: 14px;
+			color: #9798A5;
+		}
+	}
+
+	&__questions {
+		font-weight: 400;
+		font-size: 26px;
+		line-height: 40px;
+		text-align: center;
+		color: #fff;
+		text-transform: uppercase;
+	}
+
+	&__contacts {
+		color: #fff;
+		
+		&-tg {
+			position: relative;
+			padding-left: 40px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				display: inline-block;
+				background-image: url('../../../assets/img/svg/telegram_ico.svg');
+				background-size: cover;
+
+				top: 1px;
+				left: 0;
+
+				width: 20.63px;
+				height: 18.43px;
+			}
+		} 
+		&-email {
+			position: relative;
+			padding-left: 40px;
+			margin-top: 20px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				display: inline-block;
+				background-image: url('../../../assets/img/svg/email_ico.svg');
+				background-size: cover;
+
+				top: 3px;
+				left: 0;
+
+				width: 22.54px;
+				height: 15.51px;
+			}
+		} 
+	}
+}

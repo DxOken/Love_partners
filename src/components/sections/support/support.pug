@@ -1,0 +1,13 @@
+include /components/elements/button/button
+
+mixin section-support
+    .support
+        .support__content
+            .support__info
+                p.support__info-title= 'Быстрая поддержка'
+                p.support__info-special= 'Индивидуальные условия'
+                p.support__info-desc= 'Помогаем с запуском рекламных кампаний, подбираем релевантные промо-материалы. Поможем оптимизировать трафик и увеличить прибыль.'
+                .support__info-btn
+                    +button('fill', 'Начать зарабатывать')
+            .support__img
+                img.img(src='assets/img/phone.png')

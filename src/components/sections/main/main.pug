@@ -1,0 +1,29 @@
+include /components/elements/button/button
+
+mixin section-main
+    .main
+        .main__content
+            .main__content-info
+                .main__content-desc= 'Партнерская программа сайта знакомств'
+                p.main__content-title
+                    span.red!= 'Зарабатывайте&nbsp;'
+                    |на своем дейтинг трафике с нами
+                .main__content-btns
+                    +button('fill', 'Начать зарабатывать')
+                    +button('border', 'Регистрация')
+                .main__content-points
+                    .main__content-point
+                        img.dot(src='assets/img/dot.png')
+                        p.text
+                            span.title= 'Эксклюзивные собственные офферы'
+                            br/
+                            | сайта знакомств и общения
+                    .main__content-point
+                        img.dot(src='assets/img/dot.png')
+                        p.text
+                            span.title= 'Модель оплаты'
+                            br/
+                            | за Регистрацию и RevShare
+            .main__content-images
+                img.main__content-img-1(src='assets/img/girl.png')
+                img.main__content-img-2(src='assets/img/hand.png')
