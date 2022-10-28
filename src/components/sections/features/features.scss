@@ -1,70 +1,110 @@
 .features {
-	height: 650px;
-
-
+	height: res(900, 320, 650, 1920);
+	overflow-x: clip;
 
 	&__content {
-		margin: 0 115px;
+		margin: 0 res(130, 1170, 360, 1920);
 		display: flex;
 		position: relative;
 
+		@include _1170 {
+			margin: 0 res(10, 320, 130, 1170);
+		};
+
 
 		&-card {
+			position: relative;
 
-			height: 780px;
-			width: 555px;
+			width: res(300, 320, 555, 1920);
+			height: res(550, 320, 780, 1920);
 			letter-spacing: 0.03em;
 			z-index: 1;
-
 
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 
+			.bg {
+				position: absolute;
+				z-index: 1;
+
+				left: 50%;
+				transform: translate(-50%, 0);
+				top: 0;
+
+				width: res(280, 320, 552, 1920);
+				height: res(420, 320, 774, 1920);
+			}
 
 			.title {
-				font-size: 26px;
+				font-size: res(22, 320, 26, 1920);
 				line-height: 35px;
 				font-weight: 600;
 				color: #2D036A;
 				text-align: center;
-				margin-top: 80px;
-				
+				margin-top: res(20, 320, 80, 1920);
+				z-index: 2;
 
 			}
 
 			.desc {
-				font-size: 18px;
+				font-size: res(14, 320, 18, 1920);
 				font-weight: 300;
 				line-height: 19px;
 				color: #5D5A63;
 				width: 280px;
-				text-align: left;
+				text-align: center;
 				margin: 15px auto 0;
-
+				z-index: 2;
 			}
 
 
 			&:nth-child(1) {
-				background: url("../../../assets/img/svg/bg_card.svg") no-repeat;
 				margin-right: 90px;
-				margin-top: -150px;
-				padding-top: 125px;
+				margin-top: res(-50, 320, -200, 1920);
+				padding-top: res(0, 320, 125, 1920);
 				z-index: -1;
 
 				.title {
-					text-align: left;
 					width: 280px;
+				}
+
+				.img {
+					z-index: 2;
+					width: res(150, 320, 260, 1920);
 				}
 			}
 
 			&:nth-child(2) {
-				background: url("../../../assets/img/svg/bg_card.svg") no-repeat;
-				padding-top: 225px;
+				padding-top: res(100, 320, 225, 1920);
 				position: absolute;
+				height: res(570, 320, 700, 1920);
+				top: res(230, 1170, 0, 1920);
 				right: 0;
 				z-index: 100;
-				height: 700px;
+
+				@include _1170 {
+					top: res(450, 480, 230, 1170);
+
+					.title {
+						width: 220px;
+					}
+				};
+
+				@include _480 {
+					top: res(430, 320, 450, 480);
+				};
+
+
+				.img {
+					width: res(260, 320, 385, 1920);
+					margin-right: -10px;
+					z-index: 2;
+				}
+
+				.bg {
+					height: res(420, 320, 700, 1920);
+				}
 			}
 				
 
