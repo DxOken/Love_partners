@@ -39,6 +39,9 @@
 			color: #626CFF;
 			font-size: res(14, 320, 24, 1920);
 
+			position: relative;
+			z-index: 10;
+
 			@include _1170 {
 				width: res(210, 320, 250, 1170);
 			};
