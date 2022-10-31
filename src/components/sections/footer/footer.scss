@@ -1,15 +1,31 @@
 .footer {
-	height: 270px;
 	background: #2D036A;
+	overflow: clip;
 
 	&__content {
-		margin: 0 115px;
+		margin: 0 res(10, 320, 115, 1920);
 		padding-top: 90px;
+		padding-bottom: res(30, 320, 90, 1920);
 		display: flex;
 		justify-content: space-between;
+
+		@include _1170 {
+			padding-top: res(30, 320, 60, 1170);
+			flex-direction: column;
+			align-items: center;
+		};
 	}
 
 	&__company {
+		&-logo {
+
+			@include _1170 {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 23px;
+			};
+		}
+
 		&-privacy {
 			margin-top: 15px;
 			font-weight: 400;
@@ -20,19 +36,36 @@
 
 	&__questions {
 		font-weight: 400;
-		font-size: 26px;
+		font-size: res(22, 320, 26, 1920);
 		line-height: 40px;
 		text-align: center;
 		color: #fff;
 		text-transform: uppercase;
+
+		@include _1170 {
+			width: 100%;
+			margin-bottom: 23px;
+		};
 	}
 
 	&__contacts {
 		color: #fff;
+
+		@include _1170 {
+			display: flex;
+			width: 100%;
+			justify-content: space-around;
+			flex-wrap: wrap;
+		};
 		
 		&-tg {
 			position: relative;
 			padding-left: 40px;
+
+			@include _1170 {
+				font-size: 14px;
+				margin-bottom: 15px;
+			};
 
 			&:before {
 				content: '';
@@ -52,6 +85,11 @@
 			position: relative;
 			padding-left: 40px;
 			margin-top: 20px;
+
+			@include _1170 {
+				margin-top: 0;
+				font-size: 14px;
+			};
 
 			&:before {
 				content: '';
