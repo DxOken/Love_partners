@@ -1,8 +1,62 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 248:
+/***/ 792:
 /***/ (() => {
+
+var privacy = document.querySelector('.footer__company-privacy'),
+    company = document.querySelector('.footer__company'),
+    content = document.querySelector('.footer__content');
+window.addEventListener('resize', function () {
+  if (window.innerWidth > 1170) {
+    try {
+      content.removeChild(privacy);
+      company.appendChild(privacy);
+    } catch (e) {}
+  }
+
+  if (window.innerWidth <= 1170) {
+    try {
+      company.removeChild(privacy);
+      content.appendChild(privacy);
+    } catch (e) {}
+  }
+});
+
+/***/ }),
+
+/***/ 998:
+/***/ (() => {
+
+var btn = document.querySelector('.support__info-btn'),
+    info = document.querySelector('.support__info'),
+    content = document.querySelector('.support__content');
+window.addEventListener('resize', function () {
+  if (window.innerWidth > 1170) {
+    try {
+      content.removeChild(btn);
+      info.appendChild(btn);
+    } catch (e) {}
+  }
+
+  if (window.innerWidth <= 1170) {
+    try {
+      info.removeChild(btn);
+      content.appendChild(btn);
+    } catch (e) {}
+  }
+});
+
+/***/ }),
+
+/***/ 248:
+/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony import */ var _components_sections_support_support__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(998);
+/* harmony import */ var _components_sections_support_support__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_sections_support_support__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_sections_footer_footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(792);
+/* harmony import */ var _components_sections_footer_footer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_sections_footer_footer__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
@@ -40,14 +94,14 @@ pug_html = pug_html + "\u003C\u002Fdiv\u003E";
 };
 pug_mixins["section-main"] = pug_interp = function(){
 var block = (this && this.block), attributes = (this && this.attributes) || {};
-pug_html = pug_html + "\u003Cdiv class=\"main\"\u003E\u003Cdiv class=\"main__content\"\u003E\u003Cdiv class=\"main__content-info\"\u003E\u003Cdiv class=\"main__content-desc\"\u003E" + (pug.escape(null == (pug_interp = 'Партнерская программа сайта знакомств') ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003Cp class=\"main__content-title\"\u003E\u003Cspan class=\"red\"\u003E" + (null == (pug_interp = 'Зарабатывайте&nbsp;') ? "" : pug_interp) + "\u003C\u002Fspan\u003Eна своем дейтинг трафике с нами\u003C\u002Fp\u003E\u003Cdiv class=\"main__content-btns\"\u003E";
+pug_html = pug_html + "\u003Cdiv class=\"main\"\u003E\u003Cdiv class=\"main__bg\"\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"main__content\"\u003E\u003Cdiv class=\"main__content-info\"\u003E\u003Cdiv class=\"main__content-desc\"\u003E" + (pug.escape(null == (pug_interp = 'Партнерская программа сайта знакомств') ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003Cp class=\"main__content-title\"\u003E\u003Cspan class=\"red\"\u003E" + (null == (pug_interp = 'Зарабатывайте&nbsp;') ? "" : pug_interp) + "\u003C\u002Fspan\u003Eна своем дейтинг трафике с нами\u003C\u002Fp\u003E\u003Cdiv class=\"main__content-btns\"\u003E";
 pug_mixins["button"]('fill', 'Начать зарабатывать');
 pug_mixins["button"]('border', 'Регистрация');
-pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003Cdiv class=\"main__content-points\"\u003E\u003Cdiv class=\"main__content-point\"\u003E\u003Cimg class=\"dot\" src=\"assets\u002Fimg\u002Fdot.png\"\u003E\u003Cp class=\"text\"\u003E\u003Cspan class=\"title\"\u003E" + (pug.escape(null == (pug_interp = 'Эксклюзивные собственные офферы') ? "" : pug_interp)) + "\u003C\u002Fspan\u003E\u003Cbr\u002F\u003Eсайта знакомств и общения\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"main__content-point\"\u003E\u003Cimg class=\"dot\" src=\"assets\u002Fimg\u002Fdot.png\"\u003E\u003Cp class=\"text\"\u003E\u003Cspan class=\"title\"\u003E" + (pug.escape(null == (pug_interp = 'Модель оплаты') ? "" : pug_interp)) + "\u003C\u002Fspan\u003E\u003Cbr\u002F\u003Eза Регистрацию и RevShare\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"main__content-images\"\u003E\u003Cimg class=\"main__content-img-1\" src=\"assets\u002Fimg\u002Fgirl.png\"\u003E\u003Cimg class=\"main__content-img-2\" src=\"assets\u002Fimg\u002Fhand.png\"\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
+pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003Cdiv class=\"main__content-points\"\u003E\u003Cdiv class=\"main__content-point\"\u003E\u003Cimg class=\"dot\" src=\"assets\u002Fimg\u002Fdot.png\"\u003E\u003Cp class=\"text\"\u003E\u003Cspan class=\"title\"\u003E" + (pug.escape(null == (pug_interp = 'Эксклюзивные собственные офферы') ? "" : pug_interp)) + "\u003C\u002Fspan\u003E\u003Cbr\u002F\u003Eсайта знакомств и общения\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"main__content-point\"\u003E\u003Cimg class=\"dot\" src=\"assets\u002Fimg\u002Fdot.png\"\u003E\u003Cp class=\"text\"\u003E\u003Cspan class=\"title\"\u003E" + (pug.escape(null == (pug_interp = 'Модель оплаты') ? "" : pug_interp)) + "\u003C\u002Fspan\u003E\u003Cbr\u002F\u003Eза Регистрацию и RevShare\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"main__content-img-1\"\u003E\u003C\u002Fdiv\u003E\u003Cimg class=\"main__content-img-2\" src=\"assets\u002Fimg\u002Fhand.png\"\u003E\u003Cimg class=\"main__content-img-3\" src=\"assets\u002Fimg\u002Fgirl-bg.png\"\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 };
 pug_mixins["section-features"] = pug_interp = function(){
 var block = (this && this.block), attributes = (this && this.attributes) || {};
-pug_html = pug_html + "\u003Cdiv class=\"features\"\u003E\u003Cdiv class=\"features__content\"\u003E\u003Cdiv class=\"features__content-card\"\u003E\u003Cimg class=\"img\" src=\"assets\u002Fimg\u002Fconvert.png\"\u003E\u003Cdiv class=\"title\"\u003E" + (pug.escape(null == (pug_interp = 'ВЫСОКИЙ КОНВЕРТ') ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003Cdiv class=\"desc\"\u003E" + (pug.escape(null == (pug_interp = 'Собстственный эксклюзивный продуманный сайт знакомств') ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"features__content-card\"\u003E\u003Cimg class=\"img\" src=\"assets\u002Fimg\u002Fbet.png\"\u003E\u003Cdiv class=\"title\"\u003E" + (pug.escape(null == (pug_interp = 'МАКСИМАЛЬНЫЕ СТАВКИ') ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003Cdiv class=\"desc\"\u003E" + (pug.escape(null == (pug_interp = 'Когда качество трафика растет, регулярно поднимаем ставку') ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
+pug_html = pug_html + "\u003Cdiv class=\"features\"\u003E\u003Cdiv class=\"features__content\"\u003E\u003Cdiv class=\"features__content-card\"\u003E\u003Cimg class=\"bg\" src=\"assets\u002Fimg\u002Fbg_card.png\"\u003E\u003Cimg class=\"img\" src=\"assets\u002Fimg\u002Fconvert.png\"\u003E\u003Cp class=\"title\"\u003E" + (pug.escape(null == (pug_interp = 'ВЫСОКИЙ КОНВЕРТ') ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cp class=\"desc\"\u003E" + (pug.escape(null == (pug_interp = 'Собстственный эксклюзивный продуманный сайт знакомств') ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"features__content-card\"\u003E\u003Cimg class=\"bg\" src=\"assets\u002Fimg\u002Fbg_card.png\"\u003E\u003Cimg class=\"img\" src=\"assets\u002Fimg\u002Fbet.png\"\u003E\u003Cdiv class=\"title\"\u003E" + (pug.escape(null == (pug_interp = 'МАКСИМАЛЬНЫЕ СТАВКИ') ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003Cdiv class=\"desc\"\u003E" + (pug.escape(null == (pug_interp = 'Когда качество трафика растет, регулярно поднимаем ставку') ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 };
 pug_mixins["section-payments"] = pug_interp = function(){
 var block = (this && this.block), attributes = (this && this.attributes) || {};
@@ -109,7 +163,7 @@ pug_mixins["section-footer"] = pug_interp = function(){
 var block = (this && this.block), attributes = (this && this.attributes) || {};
 pug_html = pug_html + "\u003Cdiv class=\"footer\"\u003E\u003Cdiv class=\"footer__content\"\u003E\u003Cdiv class=\"footer__company\"\u003E\u003Cdiv class=\"footer__company-logo\"\u003E\u003Cimg class=\"img\" src=\"assets\u002Fimg\u002Fsvg\u002Flogo.svg\"\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"footer__company-privacy\"\u003E&#169;\n2022 LovePartners\n&nbsp;\nВсе права защищены\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"footer__questions\"\u003Eвозникли вопросы?\u003Cbr\u003Eпишите - все расскажем!\u003C\u002Fdiv\u003E\u003Cdiv class=\"footer__contacts\"\u003E\u003Cp class=\"footer__contacts-tg\"\u003E" + (pug.escape(null == (pug_interp = '@lovepartnersbiz') ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cp class=\"footer__contacts-email\"\u003E" + (pug.escape(null == (pug_interp = 'support@lovepartners.biz') ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 };
-pug_html = pug_html + "\u003C!DOCTYPE html\u003E\u003Chtml lang=\"en\"\u003E\u003Chead\u003E\u003Cmeta charset=\"UTF-8\"\u003E\u003Ctitle\u003E" + (pug.escape(null == (pug_interp = 'LovePartners') ? "" : pug_interp)) + "\u003C\u002Ftitle\u003E\u003C\u002Fhead\u003E\u003Cbody\u003E";
+pug_html = pug_html + "\u003C!DOCTYPE html\u003E\u003Chtml lang=\"en\"\u003E\u003Chead\u003E\u003Cmeta charset=\"UTF-8\"\u003E\u003Cmeta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\"\u003E\u003Cmeta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\"\u003E\u003Ctitle\u003E" + (pug.escape(null == (pug_interp = 'LovePartners') ? "" : pug_interp)) + "\u003C\u002Ftitle\u003E\u003C\u002Fhead\u003E\u003Cbody\u003E";
 pug_mixins["section-header"]();
 pug_mixins["section-main"]();
 pug_mixins["section-features"]();
@@ -416,6 +470,36 @@ function pug_rethrow(err, filename, lineno, str){
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
 /******/ 	
 /************************************************************************/
 /******/ 	
