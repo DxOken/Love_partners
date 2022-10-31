@@ -1,22 +1,37 @@
 .support {
-	height: 650px;
+	overflow-x: clip;
 
 	&__content {
-		margin: 0 115px;
+
+		margin: 0 res(50, 1170, 250, 1920) 100px;
 		display: flex;
 		justify-content: space-between;
+
+		@include _1170 {
+			flex-direction: column;
+			align-items: center;
+			margin: 0 res(10, 320, 130, 1170) 0;
+		};
 	}
 
 	&__info {
 		padding-top: 150px;
 		letter-spacing: 0.03em;
 
+		@include _1170 {
+			padding-top: 0;
+		};
+
 		&-title {
 			font-weight: 700;
-			font-size: 42px;
-			line-height: 35px;
+			font-size: res(36, 320, 42, 1920);
+			line-height: perc(46, 36);
 			text-transform: uppercase;
 			color: #2D036A;
+			
+			@include _1170 {
+				text-align: center;
+			};
 		}
 
 		&-special {
@@ -24,8 +39,13 @@
 			position: relative;
 			font-weight: 300;
 			color: #2D036A;
-			font-size: 26px;
+			font-size: res(20, 320, 26, 1920);
 			padding-left: 60px;
+
+			@include _1170 {
+				margin: res(30, 320, 50, 1170) auto 0;
+				width: fit-content;
+			};
 
 			&:before {
 				content: '';
@@ -38,6 +58,11 @@
 				display: inline-block;
 				width: 36.73px;
 				height: 28.76px;
+
+				@include _1170 {
+					width: 30.68px;
+					height: 24.02px;
+				};
 			}
 
 		}
@@ -45,19 +70,34 @@
 		&-desc {
 			margin-top: 20px;
 			font-weight: 300;
-			font-size: 18px;
+			font-size: res(14, 320, 18, 1920);
 			line-height: 22px;
 			width: 550px;
 			color: #5D5A63;
+
+			@include _1170 {
+				width: res(300, 320, 550, 1170);
+			};
 		}
 
 		&-btn {
 			margin-top: 50px;
+
+			@include _1170 {
+				margin-bottom: 50px;
+			};
 		}
 	}
 
 	&__img {
 		margin-top: 90px;
-		margin-right: 65px;
+
+		img {
+			width: res(274, 320, 429, 1920);
+		}
+
+		@include _1170 {
+			margin-top: res(20, 320, 90, 1170);
+		};
 	}
 }
