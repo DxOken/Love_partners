@@ -1,29 +1,27 @@
 .admin {
-	height: 1000px;
-	background-image: url("../../../assets/img/bg_sky.jpg");
-	background-repeat: no-repeat;
-	//background-size: contain;
-	background-position: -250px 0;
-
+	height: res(770, 320, 1000, 1920);
+	background: url("../../../assets/img/bg_sky.jpg") res(-400, 320, 0, 1920) 0 no-repeat;
+	background-size: cover;
+	overflow: clip;
 
 	&__content {
-		margin: 0 115px;
+		margin-left: res(40, 320, 115, 1920);
 	}
 
 	&__title {
-		padding-top: 110px;
+		padding-top: res(40, 320, 110, 1920);
 		text-transform: uppercase;
 		font-weight: 700;
 		letter-spacing: 0.03em;
-		font-size: 32px;
+		font-size: res(26, 320, 32, 1920);
 		line-height: 25px;
 		color: #fff;
 
 		.big {
-			font-size: 70px;
+			font-size: res(44, 320, 70, 1920);
 			line-height: 58px;
 			display: inline-block;
-			padding-bottom: 20px;
+			padding-bottom: res(5, 320, 20, 1920);
 		}
 	}
 }
